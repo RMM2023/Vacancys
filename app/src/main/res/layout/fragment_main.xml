@@ -3,12 +3,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.fragments.Main">
-
-    <!-- TODO: Update blank fragment layout -->
-    <EditText
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.fragments.Main"
+    android:background="@color/Black"
+    android:orientation="vertical">
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_search"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="40dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_view"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Grey_2">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/search_grey"/>
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_text_shape"
+                android:backgroundTint="@color/Grey_2"
+                android:hint="Должность, ключевые слова"
+                android:textColorHint="@color/Grey_3"/>
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/Grey_2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/filter"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_offers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/card_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/offers"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <TextView
+            android:id="@+id/text_list_vacancies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rec_offers"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:textSize="20sp"
+            android:textColor="@color/White"
+            android:text="Вакансии для вас"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_vacancies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/text_list_vacancies"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        tools:listitem="@layout/vacancies"
+        android:orientation="vertical"
+
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="8dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/Blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/White"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:text="Еще 143 вакансии"/>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

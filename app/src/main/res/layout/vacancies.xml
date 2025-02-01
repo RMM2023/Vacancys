@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="328dp"
+        android:layout_height="233dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="@color/Grey_1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/text_viewing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="@color/Green"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Сейчас просматривает 1 человек"/>
+            
+            <ImageView
+                android:id="@+id/image_favourites"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintTop_toTopOf="@+id/text_viewing"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/like_blue"/>
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/text_viewing"
+                app:layout_constraintStart_toStartOf="@+id/text_viewing"
+                android:textSize="16sp"
+                android:textColor="@color/White"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="UI/UX Designer"/>
+
+            <TextView
+                android:id="@+id/text_name_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/text_title"
+                app:layout_constraintStart_toStartOf="@+id/text_title"
+                android:textSize="14sp"
+                android:textColor="@color/White"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Минск"/>
+
+            <TextView
+                android:id="@+id/text_name_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/text_name_city"
+                app:layout_constraintStart_toStartOf="@+id/text_name_city"
+                android:textSize="14sp"
+                android:textColor="@color/White"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Мобирикс"/>
+
+            <ImageView
+                android:id="@+id/icon_check_mark"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/check_mark"
+                app:layout_constraintStart_toEndOf="@+id/text_name_company"
+                app:layout_constraintTop_toTopOf="@+id/text_name_company"
+                app:layout_constraintBottom_toBottomOf="@+id/text_name_company"
+                android:layout_marginStart="8dp"/>
+
+            <ImageView
+                android:id="@+id/icon_experience"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                app:layout_constraintStart_toStartOf="@+id/text_name_company"
+                app:layout_constraintTop_toBottomOf="@+id/text_name_company"
+                app:layout_constraintTop_toTopOf="@+id/text_experience"
+                app:layout_constraintBottom_toBottomOf="@+id/text_experience"
+                android:src="@drawable/experience"/>
+
+            <TextView
+                android:id="@+id/text_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/text_name_company"
+                app:layout_constraintStart_toEndOf="@+id/icon_experience"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="8dp"
+                android:textSize="14sp"
+                android:textColor="@color/White"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Опыт от 1 года до 3 лет"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/text_experience"
+                app:layout_constraintStart_toStartOf="@+id/icon_experience"
+                android:layout_marginTop="1dp"
+                android:textSize="14sp"
+                android:textColor="@color/Grey_3"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Опубликовано 20 февраля"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="@color/Green"
+                android:layout_marginEnd="16dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:textColor="@color/White"
+                android:text="Откликнуться"
+                android:textAlignment="center"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
