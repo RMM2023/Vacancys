@@ -102,8 +102,8 @@
         android:layout_marginHorizontal="16dp"
         tools:listitem="@layout/vacancies"
         android:orientation="vertical"
-
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="1"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

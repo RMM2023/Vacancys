@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.fragments.Favourites"
+    android:background="@color/Black">
+
+    <TextView
+        android:id="@+id/text_vacancy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        android:fontFamily="@font/sf_pro_display_semibold"
+        android:text="Избранное"/>
+
+    <TextView
+        android:id="@+id/text_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/text_vacancy"
+        app:layout_constraintStart_toStartOf="@+id/text_vacancy"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/Grey_3"
+        android:textSize="14sp"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:text="1 вакансия"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_favourites_vacancies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/text_quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/vacancies"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
