@@ -2,4 +2,9 @@
     <string name="app_name">Vacancys</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Поиск</string>
+    <string name="favourites">Избранное</string>
+    <string name="responses">Отклики</string>
+    <string name="chat">Сообщения</string>
+    <string name="profile">Профиль</string>
 </resources>

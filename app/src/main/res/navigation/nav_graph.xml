@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main2">
+
+    <fragment
+        android:id="@+id/main2"
+        android:name="com.portfoliormm.vacancys.presentation.ui.fragments.Main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_main2_to_favourites2"
+            app:destination="@id/favourites2" />
+    </fragment>
+    <fragment
+        android:id="@+id/favourites2"
+        android:name="com.portfoliormm.vacancys.presentation.ui.fragments.Favourites"
+        android:label="fragment_favourites"
+        tools:layout="@layout/fragment_favourites" />
+    <fragment
+        android:id="@+id/matchingVacancies"
+        android:name="com.portfoliormm.vacancys.presentation.ui.fragments.MatchingVacancies"
+        android:label="fragment_matching_vacancies"
+        tools:layout="@layout/fragment_matching_vacancies" >
+        <action
+            android:id="@+id/action_matchingVacancies_to_main2"
+            app:destination="@id/main2" />
+    </fragment>
+</navigation>
