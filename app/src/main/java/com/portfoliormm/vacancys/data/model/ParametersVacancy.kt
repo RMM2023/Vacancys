@@ -2,7 +2,7 @@ package com.portfoliormm.vacancys.data.model
 
 data class ParametersVacancy(
     val id : String,
-    val lookingNumber : Int,
+    val lookingNumber : Int?,
     val title : String,
     val address : List<Address>,
     val company : String,

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="count_people">
+        <item quantity="one"> человек</item>
+        <item quantity="other"> человека</item>
+    </plurals>
+</resources>

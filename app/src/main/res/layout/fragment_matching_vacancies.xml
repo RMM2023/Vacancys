@@ -9,15 +9,16 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_search"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:backgroundTint="@color/Grey_2"
         app:cardCornerRadius="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_filter">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,7 +36,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/edit_text_shape"
-                android:layout_marginStart="16dp"
                 android:hint="Должность по подходящим вакансиям"
                 android:textColorHint="@color/Grey_3"/>
 
@@ -45,15 +45,15 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_filter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         app:layout_constraintTop_toTopOf="@+id/card_search"
         app:layout_constraintBottom_toBottomOf="@+id/card_search"
         app:layout_constraintStart_toEndOf="@+id/card_search">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:src="@drawable/filter"/>
 
     </androidx.cardview.widget.CardView>
